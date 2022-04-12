@@ -1,9 +1,10 @@
 import axios from '../../axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import './Row.css';
 
 const Row = ({ title, fetchUrl, isLargeRow = false }) => {
     const [movies, setMovies] = useState([]);
-    const base_url = 'https://image.imdb.org/t/p/original/';
+    const base_url = 'https://image.tmdb.org/t/p/original';
     useEffect(() => {
         const fetchData = async () => {
             const request = await axios.get(fetchUrl);
